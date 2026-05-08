@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/chinese-p4">
       <App />
     </BrowserRouter>
   </StrictMode>,
