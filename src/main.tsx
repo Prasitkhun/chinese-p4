@@ -7,7 +7,7 @@ import './index.css';
 // Register Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/src/sw.ts', { type: 'module' })
+    navigator.serviceWorker.register('/chinese-p4/sw.js', { type: 'module' })
       .then(reg => console.log('SW registered:', reg))
       .catch(err => console.log('SW registration failed:', err));
   });
