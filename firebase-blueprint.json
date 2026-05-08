@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "UserProgress": {
+      "title": "User Progress",
+      "description": "Stores user completion status and scores for each lesson.",
+      "type": "object",
+      "properties": {
+        "lessonId": { "type": "number" },
+        "completed": { "type": "boolean" },
+        "score": { "type": "number" },
+        "lastStudied": { "type": "string", "format": "date-time" }
+      },
+      "required": ["lessonId", "completed", "score", "lastStudied"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/progress/{lessonId}": {
+      "schema": "UserProgress",
+      "description": "Progress records for a specific user and lesson."
+    }
+  }
+}

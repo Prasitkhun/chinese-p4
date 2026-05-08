@@ -1,0 +1,6 @@
+{
+  "name": "Jia You! Chinese Learning",
+  "description": "An offline-first, interactive Chinese language learning PWA for primary school students, featuring lessons, quizzes, AI tutor fallback, and progress syncing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["offline_first", "pwa", "sync", "ai_tutor"]
+}
