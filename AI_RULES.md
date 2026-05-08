@@ -1,0 +1,4 @@
+- ห้ามเปลี่ยน vite base path
+- ห้ามเปลี่ยน HashRouter
+- ห้ามแก้ service worker path
+- ใช้ Tailwind v4 เท่านั้น

@@ -25,11 +25,19 @@ export const LESSONS_DATA: Lesson[] = [
       { word: "请安静", pinyin: "Qǐng ānjìng", translation: "โปรดเงียบ (Please be quiet)", hint: "ใช้เมื่อนักเรียนเสียงดัง", icon: "🤫" },
       { word: "看黑板/老师/书", pinyin: "Kàn hēibǎn/lǎoshī/shū", translation: "ดูกระดาน/ครู/หนังสือ (Look at board/teacher/book)", hint: "มองไปที่สิ่งที่ครูชี้", icon: "🧑‍🏫" },
       { word: "注意听", pinyin: "Zhùyì tīng", translation: "ตั้งใจฟัง (Listen carefully)", hint: "ใช้หูฟังสิ่งที่ครูพูด", icon: "👂" },
-      { word: "打开书, 第…页", pinyin: "Dǎkāi shū, dì…yè", translation: "เปิดหนังสือหน้า… (Open the book to page...)", hint: "เลือกเมื่อครูให้หาเนื้อหาในเล่ม", icon: "📖" },
+      { word: "打开书, 第…页", pinyin: "Dǎkāi shū, dì…页", translation: "เปิดหนังสือหน้า… (Open the book to page...)", hint: "เลือกเมื่อครูให้หาเนื้อหาในเล่ม", icon: "📖" },
       { word: "请举手", pinyin: "Qǐng jǔ shǒu", translation: "ยกมือ (Please raise your hand)", hint: "ทำเมื่อต้องการถามหรือตอบ", icon: "🙋" },
       { word: "请回答", pinyin: "Qǐng huídá", translation: "เชิญตอบคำถาม (Please answer)", hint: "ครูต้องการฟังคำตอบ", icon: "💬" },
       { word: "再说一遍", pinyin: "Zàishuō yíbiàn", translation: "พูดอีกครั้ง (Say it again)", hint: "ขอให้พูดซ้ำ", icon: "🔄" },
-      { word: "慢慢说", pinyin: "Mànmàn shuō", translation: "พูดช้าๆ (Speak slowly)", hint: "ขอให้ลดความเร็วในการพูด", icon: "🐢" }
+      { word: "慢慢说", pinyin: "Mànmàn shuō", translation: "พูดช้าๆ (Speak slowly)", hint: "ขอให้ลดความเร็วในการพูด", icon: "🐢" },
+      { word: "真棒!", pinyin: "Zhên bàng!", translation: "ดีมาก (Very good!)", hint: "ใช้ชมเชย", icon: "👍" },
+      { word: "我们分组, ……人一组。", pinyin: "Wǒmen fēnzǔ, …… rén yì zǔ.", translation: "แบ่งกลุ่ม กลุ่มละ...คน (Group ourselves... people per group)", hint: "ใช้ตอนทำงานกลุ่ม", icon: "👥" },
+      { word: "准备好了吗?", pinyin: "Zhǔnbèi hǎole ma?", translation: "พร้อมแล้วหรือยัง (Are you ready?)", hint: "ถามความพร้อม", icon: "❓" },
+      { word: "开始", pinyin: "Kāishǐ", translation: "เริ่มได้ (Start)", hint: "สัญญาณให้เริ่มทำ", icon: "🏁" },
+      { word: "请等一下", pinyin: "Qǐng děng yíxià", translation: "รอสักครู่ (Wait a moment)", hint: "ขอเวลาประเดี๋ยว", icon: "⏳" },
+      { word: "听写", pinyin: "Tīngxiě", translation: "เขียนตามคำบอก (Dictation)", hint: "เขียนตามที่ครูพูด", icon: "✍️" },
+      { word: "合上书", pinyin: "Hé shàngshū", translation: "ปิดหนังสือ (Close the book)", hint: "เลิกดูเนื้อหาในเล่ม", icon: "📕" },
+      { word: "下课", pinyin: "Xiàkè", translation: "เลิกเรียน (Class ends)", hint: "เลิกคาบเรียน", icon: "🚪" }
     ],
     dialogues: [
       { role: "Teacher", text: "上课！同学们好。", pinyin: "Shàngkè! Tóngxuémen hǎo.", translation: "เริ่มเรียน! สวัสดีนักเรียนทุกคน" },

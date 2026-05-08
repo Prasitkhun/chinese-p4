@@ -998,9 +998,9 @@ const WritingLesson1 = ({ lesson }: { lesson: any }) => {
                 <p className="text-3xl font-chinese font-black text-gray-900">{item.q}</p>
               </div>
               <div className="grid grid-cols-3 gap-3">
-                {item.options.map(opt => (
+                {item.options.map((opt, oIdx) => (
                   <button 
-                    key={opt}
+                    key={`opt-${oIdx}`}
                     onClick={() => {
                       setQuizAnswers(prev => ({ ...prev, [idx]: opt }));
                       if (opt === item.correct) setProgress(prev => ({ ...prev, 2: true }));
@@ -3147,9 +3147,9 @@ const ReadingLesson8 = ({ lesson, speak }: { lesson: any, speak: (t: string) => 
                     </p>
                  </div>
                  <div className="grid grid-cols-2 gap-4">
-                    {["会", "不会"].map((opt) => (
+                    {["会", "不会"].map((opt, oIdx) => (
                        <button 
-                         key={opt}
+                         key={`opt-${oIdx}`}
                          onClick={() => setAnswers(prev => ({ ...prev, [i]: opt }))}
                          className={cn(
                            "py-5 rounded-3xl font-chinese font-black text-2xl border-4 transition-all shadow-md active:translate-y-1",
@@ -3909,9 +3909,9 @@ const WritingLesson9 = ({ lesson, speak }: { lesson: any, speak: (t: string) => 
                     <p className="text-3xl font-chinese font-black text-gray-400">{b.text}</p>
                   </div>
                   <div className="grid grid-cols-3 gap-3">
-                     {b.opts.map((opt: string) => (
+                     {b.opts.map((opt: string, oIdx: number) => (
                         <button 
-                          key={opt}
+                          key={`opt-${oIdx}`}
                           onClick={() => setFillAnswers(prev => ({ ...prev, [i]: opt }))}
                           className={cn(
                             "py-3 rounded-xl font-chinese font-black text-2xl transition-all shadow-md",
@@ -4094,9 +4094,9 @@ const FunLesson9 = ({ lesson, speak, setActiveActivity }: { lesson: any, speak: 
                   <div className="text-5xl mb-2">{i === 0 ? "🙋" : i === 1 ? "🏓" : i === 2 ? "🚶" : "🏃"}</div>
                   <p className="text-2xl font-chinese font-black text-gray-900 uppercase">{pair.zh}</p>
                   <div className="grid grid-cols-2 gap-2">
-                     {pair.opts.map((opt: string) => (
+                     {pair.opts.map((opt: string, oIdx: number) => (
                         <button 
-                          key={opt}
+                          key={`opt-${oIdx}`}
                           onClick={() => setMatchAnswers(prev => ({ ...prev, [pair.zh]: opt }))}
                           className={cn(
                             "py-2 rounded-xl font-bold transition-all text-sm",
@@ -4306,9 +4306,9 @@ const ChallengeLesson9 = ({ lesson, speak }: { lesson: any, speak: (t: string, r
                      <Volume2 size={32} />
                   </button>
                   <div className="grid grid-cols-2 gap-3 flex-grow">
-                     {item.opts.map((opt: string) => (
+                     {item.opts.map((opt: string, oIdx: number) => (
                         <button 
-                          key={opt}
+                          key={`opt-${oIdx}`}
                           onClick={() => setAnswers(prev => ({ ...prev, [i]: opt }))}
                           className={cn(
                             "py-4 rounded-2xl font-chinese font-black text-xl transition-all shadow-md",
@@ -4383,9 +4383,9 @@ const ChallengeLesson9 = ({ lesson, speak }: { lesson: any, speak: (t: string, r
                         <p className="text-gray-400 font-bold italic text-sm">{item.qTh}</p>
                      </div>
                      <div className="grid grid-cols-3 gap-4">
-                        {item.opts.map((opt: string) => (
+                        {item.opts.map((opt: string, oIdx: number) => (
                            <button 
-                             key={opt}
+                             key={`opt-${oIdx}`}
                              onClick={() => setAnswers(prev => ({ ...prev, [idx]: opt }))}
                              className={cn(
                                "py-4 rounded-xl font-chinese font-black text-xl transition-all shadow-md",
@@ -5335,8 +5335,8 @@ const SummaryLesson2 = ({ lesson, setActiveActivity, speak }: { lesson: any, set
            <div className="p-6 bg-orange-50 rounded-3xl border border-orange-100">
               <p className="font-black text-orange-600 mb-4">คำศัพท์ที่ต้องจำ</p>
               <div className="flex flex-wrap gap-2 text-sm">
-                {lesson.vocabulary.map((v: any) => (
-                  <span key={v.word} className="bg-white px-3 py-1 rounded-full font-bold border border-orange-200">{v.word} {v.pinyin}</span>
+                {lesson.vocabulary.map((v: any, vIdx: number) => (
+                  <span key={`${v.word}-${vIdx}`} className="bg-white px-3 py-1 rounded-full font-bold border border-orange-200">{v.word} {v.pinyin}</span>
                 ))}
               </div>
            </div>
@@ -6088,9 +6088,9 @@ const ReadingLesson3 = ({ lesson, speak, setActiveActivity }: { lesson: any, spe
             <div key={i} className="bg-white p-8 rounded-5xl border-2 border-blue-100 space-y-6 shadow-md">
                <p className="text-2xl font-chinese font-black text-gray-800 border-b-2 border-blue-50 pb-4">{q.q}</p>
                <div className="grid grid-cols-4 gap-3">
-                 {q.options.map(opt => (
+                 {q.options.map((opt: string, oIdx: number) => (
                    <button 
-                    key={opt}
+                    key={`opt-${oIdx}`}
                     onClick={() => setSelectedImages(prev => ({ ...prev, [i]: opt }))}
                     className={cn(
                       "aspect-square rounded-2xl text-4xl flex items-center justify-center transition-all border-4",
@@ -6189,9 +6189,9 @@ const WritingLesson3 = ({ lesson, speak, setActiveActivity }: { lesson: any, spe
                  </div>
               </div>
               <div className="flex gap-4">
-                {q.options.map(opt => (
+                {q.options.map((opt: string, oIdx: number) => (
                   <button 
-                    key={opt}
+                    key={`opt-${oIdx}`}
                     onClick={() => setFillAnswers(prev => ({ ...prev, [i]: opt }))}
                     className={cn(
                       "w-16 h-16 rounded-2xl border-4 text-2xl font-chinese font-black transition-all",
@@ -8942,7 +8942,7 @@ const VocabLibrary = ({ lesson, speak }: { lesson: any, speak: (t: string, r?: n
             {filteredVocab.map((v: any, i: number) => (
               <motion.div
                 layout
-                key={`vocab-grid-${v.word}`}
+                key={`vocab-grid-${v.word}-${i}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.01 }}
@@ -9001,8 +9001,8 @@ const VocabLibrary = ({ lesson, speak }: { lesson: any, speak: (t: string, r?: n
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {filteredVocab.map((v: any) => (
-                    <tr key={`vocab-row-${v.word}`} className="hover:bg-chinese-red/[0.03] transition-colors group">
+                  {filteredVocab.map((v: any, i: number) => (
+                    <tr key={`vocab-row-${v.word}-${i}`} className="hover:bg-chinese-red/[0.03] transition-colors group">
                       <td className="px-10 py-8">
                         <div className="flex items-center gap-6">
                           <span className="text-3xl w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform shadow-sm">{v.icon || "💮"}</span>
@@ -9743,13 +9743,13 @@ const LessonView = () => {
              </div>
 
              <div className="space-y-4 max-w-4xl mx-auto">
-                {quizQuestions.map(({ q, vocabItem, options }) => {
+                {quizQuestions.map(({ q, vocabItem, options }, qIdx) => {
                   const isAnimating = animatingQuestion?.id === q;
                   const animType = animatingQuestion?.type;
                   
                   return (
                     <div 
-                      key={`quiz-q-${q}`} 
+                      key={`quiz-q-${q}-${qIdx}`} 
                       className={cn(
                         "bg-white p-8 rounded-4xl border-2 border-gray-100 shadow-sm group hover:border-chinese-red transition-all",
                         isAnimating && animType === 'correct' && "success-pop ring-4 ring-emerald-500/20 border-emerald-500",
